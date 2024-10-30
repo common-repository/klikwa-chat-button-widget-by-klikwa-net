@@ -1,0 +1,17 @@
+{
+    "name": "micha/klikwa-plugin",
+    "description": "Klik-WA",
+    "type": "project",
+    "license": "GPL",
+    "authors": [
+        {
+            "name": "Michael Wongso",
+            "email": "michaelwongso1@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {"Inc\\": "./inc"}
+    }
+}

@@ -1,0 +1,36 @@
+.custom-radio, .custom-checkbox {
+    padding-left: 0px !important;
+    .custom-control-input {
+        &:checked {
+            &~.custom-control-label {
+                &::before {
+                    color: #fff;
+                    border-color: $primary !important;
+                    background-color: $primary !important;
+                    box-shadow: 0 0 0 3px lighten($primary, 38%);
+                } 
+            }
+        }
+        &:active {
+            &~.custom-control-label {
+                &::before {
+                    background-color: #ffffff !important; 
+                } 
+            }
+        }
+        &:focus {
+            &~.custom-control-label {
+                &::before {
+                    box-shadow: 0 0 0 3px lighten($primary, 38%) !important;
+                } 
+            }
+        }
+    }
+    .custom-control-label {
+        margin-left: 1.7rem;
+        font-size: 15px;
+        &::before {
+            border-color: $primary !important;
+        }
+    }
+}

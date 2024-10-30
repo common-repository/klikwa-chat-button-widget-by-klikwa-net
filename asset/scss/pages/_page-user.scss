@@ -1,0 +1,319 @@
+.page-user {
+    font-family: 'Nunito Sans',sans-serif;
+    .whatsapp-float {
+        position: fixed;
+        z-index: 2147483647 !important;
+        bottom: 40px;
+        right: 40px;
+        * {
+            line-height: normal;
+        }
+        .animate__animated {
+            animation-duration: 0.4s;
+        }
+        &.__left {
+            left: 40px;
+            right: auto;
+            .whatsapp-float__outer {
+                .outer-hold {
+                    float: left;
+                    display: grid;
+                    grid-template-columns: 80px 1fr;
+                    .whatsapp-label {
+                        order: 2;
+                    }
+                    .whatsapp-button{
+                        order: 1;
+                    }
+                }
+            }
+        }
+        &.__icon-text {
+            .whatsapp-float__outer {
+                .whatsapp-label {
+                    display: block;
+                    margin-bottom: 0px !important;
+                }
+                .whatsapp-button{
+                    span.notification-bubble {
+                        display: none;
+                    }
+                }
+            }
+        }
+        &.__icon {
+            .whatsapp-float__outer {
+                .whatsapp-label {
+                    display: none;
+                }
+                .whatsapp-button{
+                    span.notification-bubble {
+                        display: none;
+                    }
+                }
+            }
+        }
+        .whatsapp-float__outer {
+            .outer-hold {
+                float: right;
+                width: fit-content;
+                display: flex;
+                .whatsapp-label {
+                    align-self: center;
+                    padding: 8px 20px !important;
+                    height: fit-content;
+                    background-color: white;
+                    margin-right: 10px !important;
+                    box-shadow: 0 0 4px #8d8d8d;
+                    border-radius: 8px;
+                    font-size: 16px;
+                }
+                .whatsapp-button{
+                    width: 60px;
+                    height: 60px;
+                    background-color: $primary;
+                    color: #FFF;
+                    border-radius: 50px;
+                    text-align: center;
+                    font-size: 41px;
+                    box-shadow: 2px 2px 3px #999;
+                    z-index: 100;
+                    text-decoration: none !important;
+                    .icon-hold {
+                        display: flex;
+                        width: 100%;
+                        height: 100%;
+                        align-items: center;
+                        justify-content: center;
+                        i {
+                            display: flex;
+                            justify-content: center;
+                            &.fal.fa-times::before {
+                                content: '\00d7' !important;
+                                font-size: 42px;
+                                margin-top: -15px !important;
+                                margin-left: 2px !important;
+                            }
+                            &.fa-whatsapp:before {
+                                margin-left: 1px;
+                                margin-top: -8px;
+                            }
+                        }
+                    }
+                    span.notification-bubble {
+                        position: absolute;
+                        width: fit-content;
+                        min-width: 30px;
+                        height: 30px;
+                        margin-top: -63px;
+                        font-size: 15px;
+                        background: #ec2424;
+                        border-radius: 50%;
+                        padding: 3px 6px;
+                        font-weight: 600;
+                        margin-left: 9px;
+                    }
+                }
+            }
+        }
+        .whatsapp-float__inner {
+            display: none;
+            box-shadow: 0 3px 15px #d4d4d4;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            width: 360px;
+            background-color: white;
+            .inner-head {
+                background-color: $primary;
+                border-top-left-radius: 8px;
+                border-top-right-radius: 8px;
+                color: #FFF;
+                padding: 15px 25px;
+                display: flex;
+                i {
+                    font-size: 40px;
+                }
+                .inner-head__text {
+                    margin-left: 15px;
+                    h3 {
+                        font-size: 18px !important;
+                        font-family: "Nunito Sans", "sans-serif" !important;
+                        margin-bottom: 6px !important;
+                        font-weight: bold;
+
+                        // override wordpress built-in styling 
+                        line-height: normal !important;
+                        font-style: normal !important;
+                        color: white !important;
+                        letter-spacing: normal !important;
+                    }
+                    p {
+                        font-size: 14px;
+                        margin-bottom: 0px;
+                    }
+                }
+            }
+            .inner-body {
+                padding: 15px 25px;
+                .typical-response, .powerred-by {
+                    p {
+                        font-size: 13px !important;
+                    }
+                }
+                .typical-response {
+                    p {
+                        margin-bottom: 10px !important;
+                        color: #868686;
+                    }
+                }
+                .support-list {
+                    max-height: 273px;
+                    overflow-y: auto;
+                    padding: 0px 5px;
+                    .support-item {
+                        background: #f7f7f7;
+                        padding: 10px 16px;
+                        border-radius: 4px;
+                        border-left: 3px solid #20b356;
+                        display: grid;
+                        grid-template-columns: 55px 1fr;
+                        margin: 3px 0px 15px;
+                        .support-image {
+                            width: 55px;
+                            height: 55px;
+                            border-radius: 50%;
+                        }
+                        .support-text {
+                            padding-left: 10px;
+                            display: grid;
+                            .text-hold {
+                                height: fit-content;
+                                align-self: center;
+                                .support__name {
+                                    h4 {
+                                        font-size: 16.5px !important;
+                                        font-family: "Nunito Sans", "sans-serif" !important;
+                                        margin-bottom: 0px !important;
+                                        font-weight: 600;
+
+                                        // override wordpress built-in styling
+                                        line-height: normal !important;
+                                        letter-spacing: normal !important;
+                                        font-style: none !important;
+                                    }
+                                }
+                                .support__job-title {
+                                    p {
+                                        font-size: 13px;
+                                        color: #747474;
+                                        margin: 0px;
+                                    }
+                                }
+                            }
+                        }
+                        &:hover {
+                            background: white;
+                            transition: 0.3s;
+                            box-shadow: 0 0 10px #c4c4c4;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .page-user {
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            &.__left {
+                left: 20px;
+            }
+            .whatsapp-float__outer {
+                .outer-hold {
+                    .whatsapp-label {
+                        padding: 5px 14px !important;
+                    }
+                    .whatsapp-button{
+                        width: 50px;
+                        height: 50px;
+                        font-size: 35px;
+                        .fa-whatsapp:before {
+                            margin-left: 3px !important;
+                            margin-top: -6px;
+                        }
+                        
+                        span.notification-bubble {
+                            min-width: 25px;
+                            height: 25px;
+                            margin-left: 8px;
+                            margin-top: -53px;
+                            font-size: 13px;
+                        }
+                    }
+                }
+            }
+            .whatsapp-float__inner {
+                width: 100%;
+                max-width: 300px;
+                margin-left: 10px;
+                .inner-head {
+                    padding: 10px 20px;
+                    i {
+                        font-size: 35px;
+                    }
+                    .inner-head__text {
+                        margin-left: 10px;
+                        h3 {
+                            font-size: 15px !important;
+                        }
+                        p {
+                            font-size: 11.5px;
+                        }
+                    }
+                }
+                .inner-body {
+                    padding: 10px 20px;
+                    .typical-response, .powerred-by {
+                        p {
+                            font-size: 12px !important;
+                        }
+                    }
+                    .support-list {
+                        max-height: 273px;
+                        .support-item {
+                            padding: 8px 12px;
+                            grid-template-columns: 40px 1fr;
+                            .support-image {
+                                width: 40px;
+                                height: 40px;
+                            }
+                            .support-text {
+                                padding-left: 10px;
+                                .text-hold {
+                                    .support__name {
+                                        h4 {
+                                            font-size: 14px !important;
+                                        }
+                                    }
+                                    .support__job-title {
+                                        p {
+                                            font-size: 12px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#topcontrol {
+    display: none;
+}
